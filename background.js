@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(
 				break;
 			case "getBlockedDomains":
 				try{
-					sendResponse({arDomains: JSON.parse(localStorage["blockedDomains"])});
+					sendResponse({arDomains: JSON.parse(localStorage.blockedDomains)});
 				}catch(e){
 					sendResponse({arDomains: []});
 				}
